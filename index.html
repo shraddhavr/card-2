@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>js-card</title>
+        <script>
+           function bulbon(){
+            document.getElementById("bulb").src="bulb-on.png";
+            document.getElementById("btn-on").className="btn btn-on";
+            document.getElementById("btn-off").className="btn";
+            
+            document.querySelector(".card").className="card card-light";
+
+
+           }
+           function bulboff(){
+            document.getElementById("bulb").src="bulb-off.png";
+            document.getElementById("btn-off").className="btn btn-off";
+            document.getElementById("btn-on").className="btn";
+
+            document.querySelector(".card").className="card card-dark";
+
+        }
+
+        </script>
+        <style>
+            .card{
+                
+                height:645px;
+                
+                display:block;
+                margin:auto;
+                padding:40px;
+
+                
+            }
+         .img{
+            width:300px;
+            display:block;
+            margin:auto;
+            
+         }
+         .btn-container{
+            padding:30px;
+            display:flex;
+            justify-content: space-around;
+         }
+         .btn{
+            border:0.5px solid black;
+            border-radius:20px;
+            height:35px;
+            cursor: pointer;
+         }
+          .btn-on{
+         background-color:green;
+            color:white;
+         }
+         .btn-off{
+         background-color:red;
+            color:white;
+         }
+         .card-dark{
+            background-color:rgb(59, 51, 51);
+         }
+         .card-light{
+            background-color:rgb(245, 241, 236);
+         }
+
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <img class="img" src="bulb-off.png" id="bulb"/>
+            <div CLASS="btn-container">
+                <button class="btn" id="btn-on" onclick="bulbon()">ON</button>
+                <button class="btn" id="btn-off" onclick="bulboff()">OFF</button>
+            </div>
+        </div>
+    </body>
+</html>
